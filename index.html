@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer Management Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <h1>Customer Management</h1>
+  <form id="customerForm">
+    <input type="hidden" id="editId">
+    <input id="name" placeholder="Name" required>
+    <input id="email" type="email" placeholder="Email" required>
+    <input id="phone" placeholder="Phone" required>
+    <input id="address" placeholder="Address">
+    <button type="submit" id="saveBtn">Add customer</button>
+    <button type="button" id="cancelBtn" hidden>Cancel</button>
+  </form>
+  <input id="search" class="search" placeholder="Search customers">
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th>Actions</th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <p id="empty" hidden>No customers yet. Add one above.</p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
